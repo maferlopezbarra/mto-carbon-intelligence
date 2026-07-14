@@ -1,0 +1,17 @@
+material,group,factor
+A53-A,Carbon Steel,1.9
+A106-A,Carbon Steel,1.9
+A106-B,Carbon Steel,1.9
+A106-C,Carbon Steel,1.9
+API5L-A,Carbon Steel,1.9
+API5L-B,Carbon Steel,1.9
+A135-A,Carbon Steel,1.9
+A135-B,Carbon Steel,1.9
+A216-WCB,Carbon Steel,1.9
+A105,Carbon Steel,1.9
+A312-TP304,Stainless Steel,6.2
+A312-TP304L,Stainless Steel,6.2
+A312-TP316,Stainless Steel,6.2
+A312-TP316L,Stainless Steel,6.2
+A312-TP321,Stainless Steel,6.2
+A312-TP347,Stainless Steel,6.2
