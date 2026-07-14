@@ -5,15 +5,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 def carbon_factor() -> dict:
-    materials = pd.read_csv(BASE_DIR / "src/materials.csv")
-
     try:
+        materials = pd.read_csv(BASE_DIR / "data/input/materials.csv")
         return {
         row["material"]: row["factor"] 
         for _, row in materials.iterrows()
         }
     except FileNotFoundError:
-        raise FileNotFoundError("File src/materials.csv has been deleted or moved.")
+        raise FileNotFoundError("File data/input/materials.csv has been deleted or moved.")
     except KeyError:
         raise ValueError("File format not accepted: 'material' and/or 'factor' columns not found")
     

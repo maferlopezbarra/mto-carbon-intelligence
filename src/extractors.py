@@ -3,10 +3,11 @@ from pathlib import Path
 
 
 def get_values(file: Path) -> list[dict]:
-    if not Path(file).exists():
+    file = Path(file)
+    if not file.exists():
         raise FileNotFoundError("Database not found")
     elif file.suffix.lower() != ".db":
-        raise ValueError("Only .db diles are allowed")
+        raise ValueError("Only .db files are allowed")
     try:
         conn = sqlite3.connect(file)
         conn.row_factory = sqlite3.Row

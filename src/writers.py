@@ -2,9 +2,9 @@ from pathlib import Path
 import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-file = BASE_DIR / "data/output/mto-carbon-values.xlsx"
+OUTPUT_FILE = BASE_DIR / "data/output/mto-carbon-values.xlsx"
 
-def export_excel(result: dict, filename: Path = file):
+def export_excel(result: dict, filename: Path = OUTPUT_FILE):
     
     filename.parent.mkdir(exist_ok=True)
 

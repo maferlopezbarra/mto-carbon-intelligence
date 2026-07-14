@@ -3,11 +3,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-def get_database(name: str):
+def path_db(name: str):
     return BASE_DIR / "data/input" / name
 
 
-def data() -> Path:
+def get_path_db() -> Path:
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
@@ -17,4 +17,4 @@ def data() -> Path:
     
     args = parser.parse_args()
 
-    return get_database(args.db)
+    return path_db(args.db)
